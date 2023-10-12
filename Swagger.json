@@ -1,0 +1,56 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Fake Store API",
+        "description": "Fake store API",
+        "license": {
+            "name": "Emily Corkindale",
+            "url": "nil"
+        }
+    },
+    "host": "localhost:3002",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Em's Emporium",
+            "description": "Fake store API, with axios on the server side."
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/emsemporium/products": {
+            "get": {
+                "tags": [
+                    "Fetch for products"
+                ],
+                "summary": "Uses axios to fetch the products on the fake store api.",
+                "parameters": [
+                    {
+                        "name": "req",
+                        "in": "path",
+                        "description": "Sends a request to server"
+                    },
+                    {
+                        "name": "response",
+                        "in": "path",
+                        "description": "Sends a response from the server."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "This allows you to use axios on the back end to fetch products from the fake store api."
+                    }
+                }
+            }
+        }
+    }
+}
